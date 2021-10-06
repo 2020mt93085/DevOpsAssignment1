@@ -40,6 +40,7 @@ public class HomeController {
 
     @RequestMapping(value = "/user", method = RequestMethod.POST)
     public String user(@Validated User user, Model model) {
+        System.out.println("Redirected to user's page");
         Date currentDate = new Date();
         //DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
         DateFormat dateFormat = DateFormat.getDateInstance();
