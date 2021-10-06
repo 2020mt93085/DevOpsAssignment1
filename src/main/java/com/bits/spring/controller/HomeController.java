@@ -55,7 +55,7 @@ public class HomeController {
     	try{
     		FileInputStream fi = new FileInputStream(new File(userName+".txt"));
     		ObjectInputStream oi = new ObjectInputStream(fi);
-    		
+
     		user = (User)  oi.readObject();
     		oi.close();
     		fi.close();
@@ -68,7 +68,7 @@ public class HomeController {
 			// TODO Auto-generated catch block
 			th.printStackTrace();
 		}
-    	
+
     	if(user == null) {
     		System.out.println("User is not registered");
     		model.addAttribute("errorMsg", "User is not registered");
@@ -101,20 +101,20 @@ public class HomeController {
     		return "home";
     	}
     }
-    
+
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String register(@Validated User user, Model model) {
         System.out.println("Got registration request for user: ["+user.toString()+"]");
         try {
         	FileOutputStream f = new FileOutputStream(new File(user.getUserName()+".txt"));
-        	ObjectOutputStream o = new ObjectOutputStream(f);	
-        	
+        	ObjectOutputStream o = new ObjectOutputStream(f);
+
         	o.writeObject(user);
         	o.close();
         	f.close();
         	System.out.println("Created User having name: "+user.getUserName());
         	model.addAttribute("successMsg", "Congratulatuion! Your account has been created.");
-        	
+
         } catch (FileNotFoundException e) {
 			System.out.println("File not found");
 		} catch (IOException e) {
@@ -126,7 +126,7 @@ public class HomeController {
 		}
         return "home";
     }
-    
+
     @RequestMapping(value = "/registrationPage", method = RequestMethod.GET)
     public String registrationPage() {
         try {
