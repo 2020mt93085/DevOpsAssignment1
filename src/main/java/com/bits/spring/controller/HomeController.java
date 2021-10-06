@@ -113,6 +113,7 @@ public class HomeController {
         	o.close();
         	f.close();
         	System.out.println("Created User having name: "+user.getUserName());
+        	model.addAttribute("successMsg", "Congratulatuion! Your account has been created.");
         	
         } catch (FileNotFoundException e) {
 			System.out.println("File not found");

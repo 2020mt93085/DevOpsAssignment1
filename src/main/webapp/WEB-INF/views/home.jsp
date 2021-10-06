@@ -58,5 +58,6 @@
 
 	</form>
 	<h4 style="color:red;">${errorMsg}</h4>
+	<h4 style="color:green;">${successMsg}</h4>
 </body>
 </html>
