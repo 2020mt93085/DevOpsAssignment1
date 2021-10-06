@@ -27,36 +27,30 @@
 	<div class="container-fluid">
 		<div class="navbar-header">
         </div>
-		<form action="registrationPage" method="get">
-			<h1 style="text-align: center"><font color="white">	Find My Age </font>
-        	<button id="registersBtn" type="submit" value="register">Register</button></h1>
-	</form>
+			<h2 style="text-align: center"><font color="white">	Fill up the details to register </font></h2>
 	</div>
 	</nav>
 
 
-	<form action="user" method="post">
+	<form action="register" method="post">
 	<div class="container">
-    			<h2>
-    				<center>Login</center>
-    			</h2>
-    			<hr>
+    			
         <div class="form-group"><label for="userName">Name: </label>
 		    <input type="text" class="form-control" name="userName" placeholder="Enter your username"><br>
 		</div>
 
-        <!--<div class="form-group"><label for="dob">Date of Birth: </label>
+        <div class="form-group"><label for="dob">Date of Birth: </label>
             <input type="date" class="form-control" id="dob"name="dob">
-        </div>-->
+        </div>
 
-        <div class="form-group"><label for="password">Password: </label>
+        <div class="form-group"><label for="password">Create Password: </label>
 		   <input type="password" name="password" placeholder="Enter your password"><br>
         </div>
         <h6 align="center">
-        				<button type="submit" value="login">Login</button>
-        				<h6 align="center">
+        	<button type="submit" value="Register">Submit</button>
+        <h6 align="center">
 
 	</form>
-	<h4 style="color:red;">${errorMsg}</h4>
+	
 </body>
 </html>
